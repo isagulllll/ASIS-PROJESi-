@@ -1,4 +1,15 @@
 # ASIS (ASAYİŞ BİLGİ SİSTEMİ)
+
+
+## Proje Ekibi
+• İSA GÜL
+
+• HAYRUNNİSA TAMER
+
+• AHMET SALİH BAYRAKTAR
+
+• MOHAMED ABDİWAHAAB
+
 ## Projenin Tanımı
 ASIS projesi, kolluk kuvvetleri (polis, jandarma, bekçi vb.) sistemlerini bir araya getiren, vatandaşların verilerini diğer kamu sistemleriyle (KADES, UYAP, UYUMA, EGM Mobil, Göç İdaresi vb.) entegre şekilde çalıştırarak kullanmayı amaçlayan bir projedir.
 
