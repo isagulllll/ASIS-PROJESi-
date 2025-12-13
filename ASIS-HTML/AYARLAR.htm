@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ASİS - Sistem Ayarları Sayfası</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "surface-dark": "#1a202e",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #195de6;}
+        input:checked + .slider:before {
+            transform: translateX(16px);
+        }
+        html.dark .slider {
+            background-color: #363b46;
+        }
+        html.dark input:checked + .slider {
+            background-color: #195de6;}
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<div class="hidden md:flex flex-col w-64 bg-surface-dark border-r border-[#292e38] h-full flex-shrink-0">
+<div class="flex flex-col h-full justify-between p-4">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 pb-4 border-b border-[#292e38]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-[#292e38]" data-alt="Police Officer Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOfzwdeuLo-lr9zV9xLjtPDHXEFkNnJY8m0Qb_jDlX8Z5YnbTpaafabff2h1gMAg1vYZvagqafo6hwwq0aaFhg0UI38LDwT9sIrPaF0sTQHK6vd4IfLg6aOPleL90qzYXi_3zL2a_glfvkwLbXLg6sFP3evRDMNXz1KhVaCkfhsJHbZbsCwMLwJ6XrLfT1PJa9VoIjBgCMvwHdZe6yLSsCK6xfmvq6nEx6U5TB4eFZlNTMHo-v3cMSxfCmkkAKmolfHkh_cQRUYVM");'></div>
+<div class="flex flex-col overflow-hidden">
+<h1 class="text-white text-sm font-bold leading-normal truncate">Komiser Ali Yılmaz</h1>
+<p class="text-[#9da6b8] text-xs font-normal leading-normal truncate">Kadıköy İlçe Emniyet</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<p class="text-sm font-medium leading-normal">Kontrol Paneli</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">note_add</span>
+<p class="text-sm font-medium leading-normal">Olay Kaydı</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<p class="text-sm font-medium leading-normal">Sorgulama</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+<p class="text-sm font-medium leading-normal">Raporlar</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">map</span>
+<p class="text-sm font-medium leading-normal">Harita Görünümü</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">manage_accounts</span>
+<p class="text-sm font-medium leading-normal">Personel Yönetimi</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex w-full cursor-pointer items-center justify-start gap-3 rounded-lg h-10 px-3 text-[#ef4444] hover:bg-[#ef4444]/10 transition-colors text-sm font-bold leading-normal">
+<span class="material-symbols-outlined">logout</span>
+<span class="truncate">Güvenli Çıkış</span>
+</button>
+<p class="text-[#58627a] text-xs text-center mt-2">ASİS v2.4.1</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col flex-1 h-full overflow-hidden relative">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#292e38] bg-surface-light dark:bg-surface-dark px-6 py-3 shrink-0">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-[#111318] dark:text-white">
+<div class="size-8 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<h2 class="hidden sm:block text-lg font-bold leading-tight tracking-[-0.015em]">ASİS <span class="text-[#9da6b8] font-normal text-sm ml-2">Asayiş Bilgi Sistemi</span></h2>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#111318] dark:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-white transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#111318] dark:text-white transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<div class="h-8 w-px bg-[#e5e7eb] dark:bg-[#292e38]"></div>
+<button class="hidden sm:flex items-center justify-center rounded-lg h-9 px-4 bg-[#f0f2f5] dark:bg-[#292e38] hover:bg-[#e5e7eb] dark:hover:bg-[#363b46] text-[#111318] dark:text-white text-xs font-bold leading-normal tracking-[0.015em] transition-colors gap-2">
+<span class="material-symbols-outlined text-[18px]">dark_mode</span>
+<span>Gece Modu</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto flex flex-col gap-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-[#111318] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Sistem Ayarları</h1>
+<p class="text-[#64748b] dark:text-[#9da6b8] text-sm font-medium">Uygulamanın genel ayarlarını yönetin ve yapılandırın.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<aside class="md:col-span-1">
+<nav class="flex flex-col gap-1 sticky top-8">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-bold text-sm" href="#">
+<span class="material-symbols-outlined text-lg">tune</span>
+<span>Genel Ayarlar</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-[#64748b] dark:text-[#9da6b8] hover:text-black dark:hover:text-white font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">sync_alt</span>
+<span>Entegrasyon</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-[#64748b] dark:text-[#9da6b8] hover:text-black dark:hover:text-white font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">shield_person</span>
+<span>Rol ve Yetkiler</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-[#64748b] dark:text-[#9da6b8] hover:text-black dark:hover:text-white font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">database</span>
+<span>Veri Yönetimi</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-[#64748b] dark:text-[#9da6b8] hover:text-black dark:hover:text-white font-medium text-sm" href="#">
+<span class="material-symbols-outlined text-lg">article</span>
+<span>Loglama</span>
+</a>
+</nav>
+</aside>
+<div class="md:col-span-3 flex flex-col gap-8">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#292e38] shadow-sm">
+<div class="p-4 md:p-6 border-b border-[#e5e7eb] dark:border-[#292e38]">
+<h3 class="text-base font-bold text-[#111318] dark:text-white">Görünüm ve Kişiselleştirme</h3>
+<p class="text-sm text-[#64748b] dark:text-[#9da6b8] mt-1">Uygulama temasını ve dilini kişiselleştirin.</p>
+</div>
+<div class="p-4 md:p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<label class="font-medium text-sm text-[#111318] dark:text-white" for="dark-mode">Karanlık Mod</label>
+<p class="text-xs text-[#64748b] dark:text-[#9da6b8]">Uygulama genelinde karanlık temayı etkinleştir.</p>
+</div>
+<label class="switch">
+<input checked="" id="dark-mode" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div>
+<label class="block text-sm font-medium text-[#111318] dark:text-white mb-1.5" for="language">Uygulama Dili</label>
+<select class="w-full bg-[#f0f2f5] dark:bg-[#292e38] border border-transparent focus:border-primary focus:ring-primary/50 text-[#111318] dark:text-white placeholder:text-[#9da6b8] rounded-lg text-sm" id="language">
+<option value="tr">Türkçe</option>
+<option value="en">English</option>
+</select>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#292e38] shadow-sm">
+<div class="p-4 md:p-6 border-b border-[#e5e7eb] dark:border-[#292e38]">
+<h3 class="text-base font-bold text-[#111318] dark:text-white">Oturum Ayarları</h3>
+<p class="text-sm text-[#64748b] dark:text-[#9da6b8] mt-1">Güvenlik için oturum zaman aşımı süresini belirleyin.</p>
+</div>
+<div class="p-4 md:p-6">
+<label class="block text-sm font-medium text-[#111318] dark:text-white mb-1.5" for="session-timeout">Oturum Zaman Aşımı (dakika)</label>
+<input class="w-full bg-[#f0f2f5] dark:bg-[#292e38] border border-transparent focus:border-primary focus:ring-primary/50 text-[#111318] dark:text-white placeholder:text-[#9da6b8] rounded-lg text-sm" id="session-timeout" type="number" value="30"/>
+</div>
+</div>
+<div class="flex justify-end gap-3">
+<button class="px-4 py-2 rounded-lg text-sm font-bold bg-gray-200 dark:bg-[#292e38] hover:bg-gray-300 dark:hover:bg-[#363b46] text-[#111318] dark:text-white transition-colors">İptal</button>
+<button class="px-4 py-2 rounded-lg text-sm font-bold bg-primary hover:bg-primary/90 text-white transition-colors">Değişiklikleri Kaydet</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
