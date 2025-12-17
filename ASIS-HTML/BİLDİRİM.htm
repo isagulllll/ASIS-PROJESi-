@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ASİS - Bildirimler</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "surface-dark": "#1a202e",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<div class="hidden md:flex flex-col w-64 bg-surface-dark border-r border-[#292e38] h-full flex-shrink-0">
+<div class="flex flex-col h-full justify-between p-4">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 pb-4 border-b border-[#292e38]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-[#292e38]" data-alt="Police Officer Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOfzwdeuLo-lr9zV9xLjtPDHXEFkNnJY8m0Qb_jDlX8Z5YnbTpaafabff2h1gMAg1vYZvagqafo6hwwq0aaFhg0UI38LDwT9sIrPaF0sTQHK6vd4IfLg6aOPleL90qzYXi_3zL2a_glfvkwLbXLg6sFP3evRDMNXz1KhVaCkfhsJHbZbsCwMLwJ6XrLfT1PJa9VoIjBgCMvwHdZe6yLSsCK6xfmvq6nEx6U5TB4eFZlNTMHo-v3cMSxfCmkkAKmolfHkh_cQRUYVM");'></div>
+<div class="flex flex-col overflow-hidden">
+<h1 class="text-white text-sm font-bold leading-normal truncate">Komiser Ali Yılmaz</h1>
+<p class="text-[#9da6b8] text-xs font-normal leading-normal truncate">Kadıköy İlçe Emniyet</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<p class="text-sm font-medium leading-normal">Kontrol Paneli</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">note_add</span>
+<p class="text-sm font-medium leading-normal">Olay Kaydı</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<p class="text-sm font-medium leading-normal">Sorgulama</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+<p class="text-sm font-medium leading-normal">Raporlar</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">map</span>
+<p class="text-sm font-medium leading-normal">Harita Görünümü</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#9da6b8] hover:bg-[#292e38] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">manage_accounts</span>
+<p class="text-sm font-medium leading-normal">Personel Yönetimi</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex w-full cursor-pointer items-center justify-start gap-3 rounded-lg h-10 px-3 text-[#ef4444] hover:bg-[#ef4444]/10 transition-colors text-sm font-bold leading-normal">
+<span class="material-symbols-outlined">logout</span>
+<span class="truncate">Güvenli Çıkış</span>
+</button>
+<p class="text-[#58627a] text-xs text-center mt-2">ASİS v2.4.1</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col flex-1 h-full overflow-hidden relative">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#292e38] bg-surface-light dark:bg-surface-dark px-6 py-3 shrink-0">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-[#111318] dark:text-white">
+<div class="size-8 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<h2 class="hidden sm:block text-lg font-bold leading-tight tracking-[-0.015em]">ASİS <span class="text-[#9da6b8] font-normal text-sm ml-2">Asayiş Bilgi Sistemi</span></h2>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full bg-[#f0f2f5] dark:bg-[#292e38] text-primary transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#111318] dark:text-white transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#111318] dark:text-white transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<div class="h-8 w-px bg-[#e5e7eb] dark:bg-[#292e38]"></div>
+<button class="hidden sm:flex items-center justify-center rounded-lg h-9 px-4 bg-[#f0f2f5] dark:bg-[#292e38] hover:bg-[#e5e7eb] dark:hover:bg-[#363b46] text-[#111318] dark:text-white text-xs font-bold leading-normal tracking-[0.015em] transition-colors gap-2">
+<span class="material-symbols-outlined text-[18px]">dark_mode</span>
+<span>Gece Modu</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 bg-background-light dark:bg-background-dark">
+<div class="max-w-5xl mx-auto flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-[#64748b] dark:text-[#9da6b8] text-xs font-medium mb-1">
+<a class="hover:text-primary" href="#">Ana Sayfa</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Bildirimler</span>
+</div>
+<h1 class="text-[#111318] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Bildirimler</h1>
+<p class="text-[#64748b] dark:text-[#9da6b8] text-sm font-medium">Sistem uyarıları, acil durumlar ve görev güncellemeleri.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-[#e5e7eb] dark:border-[#292e38] rounded-lg text-sm font-bold text-[#111318] dark:text-white hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">done_all</span>
+<span class="hidden sm:inline">Tümünü Okundu İşaretle</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#292e38] p-4 flex flex-col lg:flex-row gap-4 justify-between items-center shadow-sm">
+<div class="flex items-center gap-2 w-full lg:w-auto overflow-x-auto pb-2 lg:pb-0 no-scrollbar">
+<button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold whitespace-nowrap shadow-sm shadow-blue-500/30">
+                            Tümü <span class="ml-1 opacity-80 text-xs bg-white/20 px-1.5 py-0.5 rounded-md">24</span>
+</button>
+<button class="px-4 py-2 hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#64748b] dark:text-[#9da6b8] rounded-lg text-sm font-medium whitespace-nowrap transition-colors flex items-center gap-2">
+                            Okunmamış <span class="bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-md">3</span>
+</button>
+<button class="px-4 py-2 hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#64748b] dark:text-[#9da6b8] rounded-lg text-sm font-medium whitespace-nowrap transition-colors">
+                            Acil Durum
+                        </button>
+<button class="px-4 py-2 hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#64748b] dark:text-[#9da6b8] rounded-lg text-sm font-medium whitespace-nowrap transition-colors">
+                            Görevler
+                        </button>
+<button class="px-4 py-2 hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#64748b] dark:text-[#9da6b8] rounded-lg text-sm font-medium whitespace-nowrap transition-colors">
+                            Duyurular
+                        </button>
+</div>
+<div class="relative w-full lg:w-72 shrink-0">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#9da6b8]">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-[#f6f6f8] dark:bg-[#111621] border-none text-sm text-[#111318] dark:text-white placeholder-[#9da6b8] focus:ring-2 focus:ring-primary/50 transition-shadow" placeholder="Bildirimlerde ara..." type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="group relative bg-surface-light dark:bg-surface-dark p-4 sm:p-5 rounded-xl border-l-[6px] border-l-red-500 border-y border-r border-[#e5e7eb] dark:border-[#292e38] shadow-sm hover:shadow-md transition-all">
+<div class="flex gap-4 sm:gap-5 items-start">
+<div class="size-10 sm:size-12 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start gap-2">
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-snug">Acil Kodlu Anons: Şüpheli Paket İhbarı</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 whitespace-nowrap">Yeni</span>
+</div>
+<p class="text-[#475569] dark:text-[#94a3b8] text-sm mt-1 leading-relaxed">Kadıköy Rıhtım bölgesinde şüpheli paket ihbarı alınmıştır. Bölgedeki tüm birimlerin dikkatine, en yakın ekiplerin olay yerine intikali ve çevre güvenliği alması gerekmektedir.</p>
+<div class="flex items-center gap-3 mt-3">
+<p class="text-[#9da6b8] text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 12 dakika önce
+                                    </p>
+<span class="size-1 bg-[#9da6b8] rounded-full"></span>
+<p class="text-[#9da6b8] text-xs font-medium">Merkez Komuta</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-4 bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-sm border border-[#e5e7eb] dark:border-[#292e38]">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-primary transition-colors" title="Okundu İşaretle">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-red-500 transition-colors" title="Sil">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-light dark:bg-surface-dark p-4 sm:p-5 rounded-xl border-l-[6px] border-l-green-500 border-y border-r border-[#e5e7eb] dark:border-[#292e38] shadow-sm hover:shadow-md transition-all">
+<div class="flex gap-4 sm:gap-5 items-start">
+<div class="size-10 sm:size-12 rounded-full bg-green-500/10 text-green-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">task_alt</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start gap-2">
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-snug">Görev Tamamlandı: #4829 Nolu Dosya</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 whitespace-nowrap">Yeni</span>
+</div>
+<p class="text-[#475569] dark:text-[#94a3b8] text-sm mt-1 leading-relaxed">Talep edilen GBT sorgulama işlemi başarıyla tamamlandı ve rapor otomatik olarak oluşturuldu. Dosya arşivine erişebilirsiniz.</p>
+<div class="flex items-center gap-3 mt-3">
+<p class="text-[#9da6b8] text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 45 dakika önce
+                                    </p>
+<span class="size-1 bg-[#9da6b8] rounded-full"></span>
+<p class="text-[#9da6b8] text-xs font-medium">Sistem</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-4 bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-sm border border-[#e5e7eb] dark:border-[#292e38]">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-light dark:bg-surface-dark p-4 sm:p-5 rounded-xl border-l-[6px] border-l-yellow-500 border-y border-r border-[#e5e7eb] dark:border-[#292e38] shadow-sm hover:shadow-md transition-all">
+<div class="flex gap-4 sm:gap-5 items-start">
+<div class="size-10 sm:size-12 rounded-full bg-yellow-500/10 text-yellow-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">build</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start gap-2">
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-snug">Planlı Sistem Bakım Çalışması</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 whitespace-nowrap">Yeni</span>
+</div>
+<p class="text-[#475569] dark:text-[#94a3b8] text-sm mt-1 leading-relaxed">Bu gece 02:00 - 04:00 saatleri arasında veritabanı optimizasyonu yapılacaktır. Bu süre zarfında sistemde kısa süreli kesintiler yaşanabilir.</p>
+<div class="flex items-center gap-3 mt-3">
+<p class="text-[#9da6b8] text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 1 saat önce
+                                    </p>
+<span class="size-1 bg-[#9da6b8] rounded-full"></span>
+<p class="text-[#9da6b8] text-xs font-medium">Bilgi İşlem Daire Bşk.</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-4 bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-sm border border-[#e5e7eb] dark:border-[#292e38]">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 py-4">
+<div class="h-px flex-1 bg-[#e5e7eb] dark:bg-[#292e38]"></div>
+<span class="text-xs font-bold text-[#9da6b8] uppercase tracking-wider">Okunmuş Bildirimler</span>
+<div class="h-px flex-1 bg-[#e5e7eb] dark:bg-[#292e38]"></div>
+</div>
+<div class="group relative bg-surface-light dark:bg-surface-dark p-4 sm:p-5 rounded-xl border border-[#e5e7eb] dark:border-[#292e38] shadow-sm hover:shadow-md transition-all opacity-75 hover:opacity-100">
+<div class="flex gap-4 sm:gap-5 items-start">
+<div class="size-10 sm:size-12 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">campaign</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start gap-2">
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-snug">Haftalık Personel Toplantısı</h3>
+</div>
+<p class="text-[#475569] dark:text-[#94a3b8] text-sm mt-1 leading-relaxed">25.10.2023 Çarşamba günü saat 09:00'da İlçe Emniyet Müdürü başkanlığında genel değerlendirme toplantısı yapılacaktır. Katılım zorunludur.</p>
+<div class="flex items-center gap-3 mt-3">
+<p class="text-[#9da6b8] text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Dün, 14:30
+                                    </p>
+<span class="size-1 bg-[#9da6b8] rounded-full"></span>
+<p class="text-[#9da6b8] text-xs font-medium">İdari Büro</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-4 bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-sm border border-[#e5e7eb] dark:border-[#292e38]">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mark_email_unread</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-light dark:bg-surface-dark p-4 sm:p-5 rounded-xl border border-[#e5e7eb] dark:border-[#292e38] shadow-sm hover:shadow-md transition-all opacity-75 hover:opacity-100">
+<div class="flex gap-4 sm:gap-5 items-start">
+<div class="size-10 sm:size-12 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start gap-2">
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-snug">Güvenlik Protokolü Güncellemesi</h3>
+</div>
+<p class="text-[#475569] dark:text-[#94a3b8] text-sm mt-1 leading-relaxed">Siber güvenlik önlemleri kapsamında parola politikaları güncellenmiştir. Lütfen bir sonraki oturum açışınızda parolanızı yenileyiniz.</p>
+<div class="flex items-center gap-3 mt-3">
+<p class="text-[#9da6b8] text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 2 gün önce
+                                    </p>
+<span class="size-1 bg-[#9da6b8] rounded-full"></span>
+<p class="text-[#9da6b8] text-xs font-medium">Güvenlik Birimi</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-4 bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-sm border border-[#e5e7eb] dark:border-[#292e38]">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mark_email_unread</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-light dark:bg-surface-dark p-4 sm:p-5 rounded-xl border border-[#e5e7eb] dark:border-[#292e38] shadow-sm hover:shadow-md transition-all opacity-75 hover:opacity-100">
+<div class="flex gap-4 sm:gap-5 items-start">
+<div class="size-10 sm:size-12 rounded-full bg-green-500/10 text-green-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">military_tech</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start gap-2">
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-snug">Başarılı Operasyon Tebriği</h3>
+</div>
+<p class="text-[#475569] dark:text-[#94a3b8] text-sm mt-1 leading-relaxed">Geçtiğimiz hafta 'Huzur' operasyonunda üstün başarı gösteren Kadıköy İlçe Emniyet personeli tebrik edilir.</p>
+<div class="flex items-center gap-3 mt-3">
+<p class="text-[#9da6b8] text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 3 gün önce
+                                    </p>
+<span class="size-1 bg-[#9da6b8] rounded-full"></span>
+<p class="text-[#9da6b8] text-xs font-medium">İl Emniyet Müdürü</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity absolute right-4 top-4 bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-sm border border-[#e5e7eb] dark:border-[#292e38]">
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mark_email_unread</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] text-[#9da6b8] hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center mt-4 mb-8">
+<button class="flex items-center gap-2 px-6 py-3 rounded-full bg-surface-light dark:bg-surface-dark border border-[#e5e7eb] dark:border-[#292e38] text-sm font-bold text-primary hover:bg-[#f0f2f5] dark:hover:bg-[#292e38] transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+                        Daha Eski Bildirimleri Yükle
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
